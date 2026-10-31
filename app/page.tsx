@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Calendar, MapPin, Signpost, Coffee, Bike } from "lucide-react";
 import { Caveat } from "next/font/google";
+import { ContactForm } from "./contact-form";
 
 const caveat = Caveat({ subsets: ["latin"], weight: "600" });
 
@@ -65,34 +66,7 @@ export default function Home() {
           </div>
           <div className="px-8 py-8 flex flex-col gap-4 bg-[#F0EBE3]">
             <p className="text-sm font-bold uppercase tracking-widest text-[#123B6D]/50">Get in touch</p>
-            <form className="flex flex-col gap-2">
-              <div className="grid grid-cols-2 gap-2">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className="w-full rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-[#123B6D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#123B6D]/30"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  className="w-full rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-[#123B6D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#123B6D]/30"
-                />
-              </div>
-              <textarea
-                name="message"
-                rows={2}
-                placeholder="Say hello, or let us know you'd like to join a ride…"
-                className="w-full rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-[#123B6D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#123B6D]/30 resize-none"
-              />
-              <button
-                type="submit"
-                className="self-start rounded-md bg-[#123B6D] px-5 py-2 text-sm font-medium text-[#F2E8D1] hover:bg-[#123B6D]/80 transition-colors"
-              >
-                Send
-              </button>
-            </form>
+            <ContactForm />
             <div className="mt-auto">
               <p className="text-[10px] font-bold uppercase tracking-widest text-[#123B6D]/50 mb-1">Important note</p>
               <p className="text-[#123B6D]/80 text-sm leading-relaxed">
